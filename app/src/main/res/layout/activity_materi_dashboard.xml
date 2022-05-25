@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:padding="25dp">
+        android:padding="18dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -36,6 +36,7 @@
                 android:background="@color/peter">
 
                 <androidx.cardview.widget.CardView
+                    android:onClick="onClick"
                     android:id="@+id/card_dasar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -61,6 +62,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:onClick="onClick"
                     android:id="@+id/card_angka"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
@@ -87,6 +89,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:onClick="onClick"
                     android:id="@+id/card_swara"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
@@ -113,6 +116,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:onClick="onClick"
                     android:id="@+id/card_sandhangan"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
@@ -139,6 +143,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:onClick="onClick"
                     android:id="@+id/card_pasangan"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"

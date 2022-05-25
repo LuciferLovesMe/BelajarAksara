@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:padding="25dp">
+        android:padding="18dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -37,6 +37,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_soal"
+                    android:onClick="onClick"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
@@ -62,6 +63,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_tebak"
+                    android:onClick="onClick"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_baca"
+                    android:onClick="onClick"
                     android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

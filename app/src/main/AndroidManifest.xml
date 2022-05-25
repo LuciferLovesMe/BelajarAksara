@@ -9,16 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAksara">
-        <activity android:name=".EvaluasiDashboardActivity"></activity>
-        <activity android:name=".MateriDashboardActivity" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".BacaActivity"></activity>
+        <activity android:name=".TebakActivity" />
+        <activity android:name=".EvaluasiActivity" />
+        <activity android:name=".PasanganActivity" />
+        <activity android:name=".SandhanganActivity" />
+        <activity android:name=".SwaraActivity" />
+        <activity android:name=".AngkaActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DasarActivity"/>
+        <activity android:name=".EvaluasiDashboardActivity" />
+        <activity android:name=".MateriDashboardActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
