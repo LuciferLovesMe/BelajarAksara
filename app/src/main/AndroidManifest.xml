@@ -12,10 +12,7 @@
         <activity android:name=".BacaActivity"></activity>
         <activity android:name=".TebakActivity" />
         <activity android:name=".EvaluasiActivity" />
-        <activity android:name=".PasanganActivity" />
-        <activity android:name=".SandhanganActivity" />
-        <activity android:name=".SwaraActivity" />
-        <activity android:name=".AngkaActivity"
+        <activity android:name=".PasanganActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SandhanganActivity" />
+        <activity android:name=".SwaraActivity" />
+        <activity android:name=".AngkaActivity"/>
         <activity android:name=".DasarActivity"/>
         <activity android:name=".EvaluasiDashboardActivity" />
         <activity android:name=".MateriDashboardActivity" />
