@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -26,13 +27,16 @@ public class DasarActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-    @SuppressLint("ResourceAsColor")
     @Override
     public void onClick(View view) {
         int id = view.getId();
         mp = null;
 
-        if (id == R.id.ha){
+        if (id == R.id.card_latihan){
+            startActivity(new Intent(getApplicationContext(), LatihanDasarActivity.class));
+        }
+
+        else if (id == R.id.ha){
             mp = MediaPlayer.create(ctx, R.raw.ha);
 
             mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
