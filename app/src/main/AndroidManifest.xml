@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAksara">
-        <activity android:name=".PretestAngkaActivity9"></activity>
+        <activity android:name=".LatihanAngkaActivity9"></activity>
+        <activity android:name=".LatihanAngkaActivity8" />
+        <activity android:name=".LatihanAngkaActivity7" />
+        <activity android:name=".LatihanAngkaActivity6" />
+        <activity android:name=".LatihanAngkaActivity5" />
+        <activity android:name=".LatihanAngkaActivity4" />
+        <activity android:name=".LatihanAngkaActivity3" />
+        <activity android:name=".LatihanAngkaActivity2" />
+        <activity android:name=".LatihanAngkaActivity1" />
+        <activity android:name=".LatihanAngkaActivity" />
+        <activity android:name=".PretestAngkaActivity9" />
         <activity android:name=".PretestAngkaActivity8" />
         <activity android:name=".PretestAngkaActivity7" />
         <activity android:name=".PretestAngkaActivity6" />
@@ -19,25 +29,35 @@
         <activity android:name=".PretestAngkaActivity2" />
         <activity android:name=".PretestAngkaActivity1" />
         <activity android:name=".PretestAngkaActivity" />
-        <activity android:name=".PretestDasar9Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar8Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar7Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar6Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar5Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar4Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar3Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar2Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasar1Activity"
-            android:exported="true"/>
-        <activity android:name=".PretestDasarActivity"
+        <activity
+            android:name=".PretestDasar9Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar8Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar7Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar6Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar5Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar4Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar3Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasar1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestDasarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -74,7 +94,7 @@
             android:exported="true" />
         <activity
             android:name=".LatihanDasarActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".PasanganActivity"
             android:exported="true"
@@ -118,7 +138,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
