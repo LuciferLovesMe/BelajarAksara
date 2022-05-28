@@ -9,64 +9,96 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAksara">
-        <activity android:name=".LatihanDasar9Activity"
-            android:exported="true"></activity>
-        <activity android:name=".LatihanDasar8Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar7Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar6Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar5Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar4Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar3Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar2Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasar1Activity"
-            android:exported="true"/>
-        <activity android:name=".LatihanDasarActivity"
-            android:exported="true"/>
-        <activity android:name=".PasanganActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".BacaActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".TebakActivity"
-            android:exported="true"/>
-        <activity android:name=".EvaluasiActivity"
-            android:exported="true"/>
-        <activity android:name=".SandhanganActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".SwaraActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".AngkaActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".DasarActivity"
-            android:parentActivityName=".MateriDashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".EvaluasiDashboardActivity"
-            android:parentActivityName=".DashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".MateriDashboardActivity"
-            android:parentActivityName=".DashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".DashboardActivity"
-            android:exported="true"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".PretestDasar9Activity"></activity>
+        <activity android:name=".PretestDasar8Activity" />
+        <activity android:name=".PretestDasar7Activity" />
+        <activity android:name=".PretestDasar6Activity" />
+        <activity android:name=".PretestDasar5Activity" />
+        <activity android:name=".PretestDasar4Activity" />
+        <activity android:name=".PretestDasar3Activity" />
+        <activity android:name=".PretestDasar2Activity" />
+        <activity android:name=".PretestDasar1Activity" />
+        <activity android:name=".PretestDasarActivity" />
+        <activity
+            android:name=".LatihanDasar9Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar8Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar7Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar6Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar5Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar4Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar3Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasar1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanDasarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PasanganActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".BacaActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".TebakActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EvaluasiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SandhanganActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".SwaraActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".AngkaActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".DasarActivity"
+            android:exported="true"
+            android:parentActivityName=".MateriDashboardActivity" />
+        <activity
+            android:name=".EvaluasiDashboardActivity"
+            android:exported="true"
+            android:parentActivityName=".DashboardActivity" />
+        <activity
+            android:name=".MateriDashboardActivity"
+            android:exported="true"
+            android:parentActivityName=".DashboardActivity" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>/>
+        </activity>
     </application>
 
 </manifest>
