@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,11 +14,12 @@ import java.util.Random;
 
 public class LatihanDasar1Activity extends AppCompatActivity implements View.OnClickListener {
     Context ctx;
-    Class[] c = new Class[9];
+    Class[] c = new Class[8];
     Random r = new Random();
     AlertDialog dialog;
     LatihanDasar l;
     int count, nilai;
+    String key = "latihan_dasar";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +28,8 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
 
         ctx = this;
         l = new LatihanDasar(ctx);
-        count = l.getCount();
 
-        c[0] = LatihanDasarActivity.class;
+        c[0] = LatihanDasar9Activity.class;
         c[1] = LatihanDasar2Activity.class;
         c[2] = LatihanDasar3Activity.class;
         c[3] = LatihanDasar4Activity.class;
@@ -36,18 +37,21 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
         c[5] = LatihanDasar6Activity.class;
         c[6] = LatihanDasar7Activity.class;
         c[7] = LatihanDasar8Activity.class;
-        c[8] = LatihanDasar9Activity.class;
     }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
+        SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();
+        nilai = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+        count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
-            l.setPrefs(count + 1, nilai + 0);
-            if (l.getCount() < 10){
+            editor.putInt("nilai", nilai + 0).commit();
+            editor.putInt("count", count + 1).commit();
+            if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -59,7 +63,7 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
             else{
                 dialog = new AlertDialog.Builder(ctx).create();
                 dialog.setTitle("Latihan Selesai");
-                dialog.setMessage("Nilai Kamu " + String.valueOf(l.getNilai()));
+                dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -73,8 +77,9 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
                 dialog = new AlertDialog.Builder(ctx).create();
                 dialog.setTitle("Benar");
                 dialog.setMessage("Jawaban Kamu Benar");
-                l.setPrefs(count + 1, nilai + 10);
-                if (l.getCount() < 10){
+            editor.putInt("nilai", nilai + 10).commit();
+            editor.putInt("count", count + 1).commit();
+                if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                     dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -86,7 +91,7 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
                 else{
                     dialog = new AlertDialog.Builder(ctx).create();
                     dialog.setTitle("Latihan Selesai");
-                    dialog.setMessage("Nilai Kamu " + String.valueOf(l.getNilai()));
+                    dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                     dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -98,10 +103,11 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
             }
             else if (id == R.id.c){
                 dialog = new AlertDialog.Builder(ctx).create();
-                dialog.setTitle("Benar");
+                dialog.setTitle("Salah");
                 dialog.setMessage("Jawaban Kamu Salah");
-                l.setPrefs(count + 1, nilai + 0);
-                if (l.getCount() < 10){
+            editor.putInt("nilai", nilai + 0).commit();
+            editor.putInt("count", count + 1).commit();
+                if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                     dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -113,7 +119,7 @@ public class LatihanDasar1Activity extends AppCompatActivity implements View.OnC
                 else{
                     dialog = new AlertDialog.Builder(ctx).create();
                     dialog.setTitle("Latihan Selesai");
-                    dialog.setMessage("Nilai Kamu " + String.valueOf(l.getNilai()));
+                    dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                     dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {

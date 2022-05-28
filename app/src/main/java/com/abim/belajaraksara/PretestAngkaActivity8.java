@@ -12,32 +12,32 @@ import android.view.View;
 
 import java.util.Random;
 
-public class PretestDasar7Activity extends AppCompatActivity implements View.OnClickListener {
+public class PretestAngkaActivity8 extends AppCompatActivity implements View.OnClickListener {
     Context ctx;
     Class[] c = new Class[8];
     Random r = new Random();
     AlertDialog dialog;
-    PretestDasar p;
+    PretestAngka p;
     int count, nilai;
-    String key = "pretest_dasar";
+    String key = "pretest_angka";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pretest_dasar7);
+        setContentView(R.layout.activity_pretest_angka8);
 
         ctx = this;
-        p = new PretestDasar(ctx);
+        p = new PretestAngka(ctx);
         count = p.getCount();
 
-        c[0] = PretestDasar9Activity.class;
-        c[1] = PretestDasar2Activity.class;
-        c[2] = PretestDasar3Activity.class;
-        c[3] = PretestDasar4Activity.class;
-        c[4] = PretestDasar5Activity.class;
-        c[5] = PretestDasar6Activity.class;
-        c[6] = PretestDasar1Activity.class;
-        c[7] = PretestDasar8Activity.class;
+        c[0] = PretestAngkaActivity1.class;
+        c[1] = PretestAngkaActivity9.class;
+        c[2] = PretestAngkaActivity3.class;
+        c[3] = PretestAngkaActivity4.class;
+        c[4] = PretestAngkaActivity5.class;
+        c[5] = PretestAngkaActivity6.class;
+        c[6] = PretestAngkaActivity7.class;
+        c[7] = PretestAngkaActivity2.class;
     }
 
     @Override
