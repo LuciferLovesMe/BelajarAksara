@@ -30,8 +30,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
         p = new PretestDasar(ctx);
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();
         if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) > 0){
-            editor.putInt("nilai", 0);
-            editor.putInt("count", 0);
+            editor.putInt("nilai", 0).commit();
+            editor.putInt("count", 0).commit();
         }
 
         c[0] = PretestDasar1Activity.class;

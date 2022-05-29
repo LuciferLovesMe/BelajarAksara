@@ -32,8 +32,12 @@ public class DasarActivity extends AppCompatActivity implements View.OnClickList
         int id = view.getId();
         mp = null;
 
-        if (id == R.id.card_latihan){
+        if (id == R.id.pretest){
             startActivity(new Intent(getApplicationContext(), LatihanDasarActivity.class));
+        }
+
+        else if (id == R.id.latihan){
+            startActivity(new Intent(getApplicationContext(), PretestDasarActivity.class));
         }
 
         else if (id == R.id.ha){

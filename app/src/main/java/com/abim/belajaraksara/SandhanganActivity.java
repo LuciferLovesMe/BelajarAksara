@@ -3,6 +3,7 @@ package com.abim.belajaraksara;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,14 @@ public class SandhanganActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
+        int id = view.getId();
 
+        if (id == R.id.pretest){
+            startActivity(new Intent(getApplicationContext(), PretestSandhanganActivity.class));
+        }
+
+        else if (id == R.id.latihan){
+            startActivity(new Intent(getApplicationContext(), LatihanSandhanganActivity.class));
+        }
     }
 }

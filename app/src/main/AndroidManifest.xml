@@ -9,36 +9,166 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAksara">
-        <activity android:name=".LatihanSwaraActivity9"></activity>
-        <activity android:name=".LatihanSwaraActivity8" />
-        <activity android:name=".LatihanSwaraActivity7" />
-        <activity android:name=".LatihanSwaraActivity6" />
-        <activity android:name=".LatihanSwaraActivity5" />
-        <activity android:name=".LatihanSwaraActivity4" />
-        <activity android:name=".LatihanSwaraActivity3" />
-        <activity android:name=".LatihanSwaraActivity2" />
-        <activity android:name=".LatihanSwaraActivity1" />
-        <activity android:name=".LatihanSwaraActivity" />
-        <activity android:name=".PretestSwaraActivity9" />
-        <activity android:name=".PretestSwaraActivity8" />
-        <activity android:name=".PretestSwaraActivity7" />
-        <activity android:name=".PretestSwaraActivity6" />
-        <activity android:name=".PretestSwaraActivity5" />
-        <activity android:name=".PretestSwaraActivity4" />
-        <activity android:name=".PretestSwaraActivity3" />
-        <activity android:name=".PretestSwaraActivity2" />
-        <activity android:name=".PretestSwaraActivity1" />
-        <activity android:name=".PretestSwaraActivity" />
-        <activity android:name=".LatihanPasanganActivity9" />
-        <activity android:name=".LatihanPasanganActivity8" />
-        <activity android:name=".LatihanPasanganActivity7" />
-        <activity android:name=".LatihanPasanganActivity6" />
-        <activity android:name=".LatihanPasanganActivity5" />
-        <activity android:name=".LatihanPasanganActivity4" />
-        <activity android:name=".LatihanPasanganActivity3" />
-        <activity android:name=".LatihanPasanganActivity2" />
-        <activity android:name=".LatihanPasanganActivity1" />
-        <activity android:name=".LatihanPasanganActivity" />
+        <activity android:name=".PretestSandhanganActivity9"
+            android:exported="true" ></activity>
+        <activity android:name=".PretestSandhanganActivity8"
+            android:exported="true"  />
+        <activity android:name=".PretestSandhanganActivity7"
+            android:exported="true"  />
+        <activity android:name=".PretestSandhanganActivity6"
+            android:exported="true" />
+        <activity android:name=".PretestSandhanganActivity5"
+            android:exported="true" />
+        <activity android:name=".PretestSandhanganActivity4"
+            android:exported="true" />
+        <activity android:name=".PretestSandhanganActivity3"
+            android:exported="true"  />
+        <activity android:name=".PretestSandhanganActivity2"
+            android:exported="true"  />
+        <activity android:name=".PretestSandhanganActivity1"
+            android:exported="true" />
+        <activity android:name=".PretestSandhanganActivity"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity9"
+            android:exported="true"  />
+        <activity android:name=".LatihanSandhanganActivity8"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity7"
+            android:exported="true"  />
+        <activity android:name=".LatihanSandhanganActivity6"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity5"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity4"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity3"
+            android:exported="true"  />
+        <activity android:name=".LatihanSandhanganActivity2"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity1"
+            android:exported="true" />
+        <activity android:name=".LatihanSandhanganActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity9"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity8"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity7"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity6"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity5"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".SoalEvaluasiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity9"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity8"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity7"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity6"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity5"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanSwaraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity9"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity8"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity7"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity6"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity5"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".PretestSwaraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity9"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity8"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity7"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity6"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity5"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".LatihanPasanganActivity"
+            android:exported="true" />
         <activity
             android:name=".PretestPasanganActivity9"
             android:exported="true" />
@@ -68,13 +198,7 @@
             android:exported="true" />
         <activity
             android:name=".PretestPasanganActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".LatihanAngkaActivity9"
             android:exported="true" />
@@ -238,7 +362,13 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

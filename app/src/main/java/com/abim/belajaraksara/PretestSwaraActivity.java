@@ -28,6 +28,12 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
 
         ctx  = this;
 
+        SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();
+        if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) > 0){
+            editor.putInt("nilai", 0).commit();
+            editor.putInt("count", 0).commit();
+        }
+
         c[0] = LatihanAngkaActivity1.class;
         c[1] = LatihanAngkaActivity2.class;
         c[2] = LatihanAngkaActivity3.class;
@@ -67,7 +73,7 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });
                 dialog.show();
@@ -95,7 +101,7 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });
                 dialog.show();
@@ -123,7 +129,7 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });
                 dialog.show();

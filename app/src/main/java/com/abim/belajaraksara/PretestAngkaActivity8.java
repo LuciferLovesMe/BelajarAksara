@@ -68,7 +68,7 @@ public class PretestAngkaActivity8 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });
                 dialog.show();
@@ -96,7 +96,7 @@ public class PretestAngkaActivity8 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });
                 dialog.show();
@@ -124,7 +124,7 @@ public class PretestAngkaActivity8 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });
                 dialog.show();

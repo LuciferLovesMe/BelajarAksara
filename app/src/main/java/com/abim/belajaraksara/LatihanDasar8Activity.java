@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class LatihanDasar8Activity extends AppCompatActivity implements View.OnClickListener {
     Context ctx;
-    Class[] c = new Class[9];
+    Class[] c = new Class[8];
     Random r = new Random();
     AlertDialog dialog;
     LatihanDasar l;

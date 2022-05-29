@@ -651,7 +651,6 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_latihan"
-        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -662,15 +661,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/latihan"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="LATIHAN"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:text="latihan"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/pretest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:text="pretest"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 

@@ -67,7 +67,7 @@ public class LatihanPasanganActivity1 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
                 dialog.show();
@@ -95,7 +95,7 @@ public class LatihanPasanganActivity1 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
                 dialog.show();
@@ -123,7 +123,7 @@ public class LatihanPasanganActivity1 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+                        startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
                 dialog.show();
