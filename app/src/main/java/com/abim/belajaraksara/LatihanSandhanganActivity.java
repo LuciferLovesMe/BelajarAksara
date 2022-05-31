@@ -48,6 +48,16 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         c[6] = LatihanSandhanganActivity7.class;
         c[7] = LatihanSandhanganActivity8.class;
         c[8] = LatihanSandhanganActivity9.class;
+
+        check();
+    }
+
+    public void check(){
+        int c = helper.checking("sandhangan");
+        if (c >= 10){
+            String query = "delete from hasil where name = 'sandhangan'";
+            db.execSQL(query);
+        }
     }
 
     @Override

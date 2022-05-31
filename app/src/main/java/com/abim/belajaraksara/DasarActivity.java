@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -25,6 +26,13 @@ public class DasarActivity extends AppCompatActivity implements View.OnClickList
         ctx = this;
         getSupportActionBar().setTitle("Aksara Dasar");
 
+        setText();
+    }
+
+    void setText(){
+        DBHelper helper = new DBHelper(ctx);
+        TextView tv = findViewById(R.id.tv_nilai);
+        tv.setText("Skor Pretest Kamu : " + String.valueOf(helper.pre("pretest_dasar")));
     }
 
     @Override

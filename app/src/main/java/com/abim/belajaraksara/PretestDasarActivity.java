@@ -48,6 +48,16 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
         c[6] = PretestDasar7Activity.class;
         c[7] = PretestDasar8Activity.class;
         c[8] = PretestDasar9Activity.class;
+
+        check();
+    }
+
+    public void check(){
+        int c = helper.checking("dasar");
+        if (c >= 10){
+            String query = "delete from hasil where nama = 'dasar'";
+            db.execSQL(query);
+        }
     }
 
     @Override

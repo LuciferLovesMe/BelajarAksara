@@ -48,6 +48,16 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
         c[6] = LatihanSwaraActivity7.class;
         c[7] = LatihanSwaraActivity8.class;
         c[8] = LatihanSwaraActivity9.class;
+
+        check();
+    }
+
+    public void check(){
+        int c = helper.checking("swara");
+        if (c >= 10){
+            String query = "delete from hasil where name = 'swara'";
+            db.execSQL(query);
+        }
     }
 
     @Override

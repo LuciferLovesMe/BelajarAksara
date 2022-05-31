@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class PasanganActivity extends AppCompatActivity implements View.OnClickListener {
     Context ctx;
@@ -17,6 +18,14 @@ public class PasanganActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().setTitle("Aksara Pasangan");
 
         ctx = this;
+
+        setText();
+    }
+
+    void setText(){
+        DBHelper helper = new DBHelper(ctx);
+        TextView tv = findViewById(R.id.tv_nilai);
+        tv.setText("Skor Pretest Kamu : " + String.valueOf(helper.pre("pretest_pasangan")));
     }
 
     @Override

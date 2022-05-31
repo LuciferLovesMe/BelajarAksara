@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class SwaraActivity extends AppCompatActivity implements View.OnClickListener {
     Context ctx;
@@ -19,6 +20,14 @@ public class SwaraActivity extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().setTitle("Aksara Swara");
 
         ctx = this;
+
+        setText();
+    }
+
+    void setText(){
+        DBHelper helper = new DBHelper(ctx);
+        TextView tv = findViewById(R.id.tv_nilai);
+        tv.setText("Skor Pretest Kamu : " + String.valueOf(helper.pre("pretest_angka")));
     }
 
     @Override

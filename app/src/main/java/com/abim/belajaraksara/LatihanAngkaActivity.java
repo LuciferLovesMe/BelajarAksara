@@ -47,6 +47,16 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
         c[6] = LatihanAngkaActivity7.class;
         c[7] = LatihanAngkaActivity8.class;
         c[8] = LatihanAngkaActivity9.class;
+
+        check();
+    }
+
+    public void check(){
+        int c = helper.checking("angka");
+        if (c >= 10){
+            String query = "delete from hasil where name = 'angka'";
+            db.execSQL(query);
+        }
     }
 
     @Override

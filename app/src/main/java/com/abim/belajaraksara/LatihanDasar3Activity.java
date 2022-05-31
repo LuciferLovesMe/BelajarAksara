@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -39,6 +40,14 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
         c[7] = LatihanDasar8Activity.class;
     }
 
+    void ins(String s){
+        DBHelper helper = new DBHelper(ctx);
+        SQLiteDatabase db;
+        db = helper.getWritableDatabase();
+        String query = "insert into hasil values(null, 'pretest_dasar', '"+s+"')";
+        db.execSQL(query);
+    }
+
     @Override
     public void onClick(View view) {
 
@@ -48,9 +57,9 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
-            editor.putInt("nilai", nilai + 0).commit();
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
+            editor.putInt("nilai", nilai + 10).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
@@ -68,6 +77,7 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -96,6 +106,7 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -104,9 +115,9 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
         }
         else if (id == R.id.c){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Benar");
-            dialog.setMessage("Jawaban Kamu Benar");
-            editor.putInt("nilai", nilai + 10).commit();
+            dialog.setTitle("Salah");
+            dialog.setMessage("Jawaban Kamu Salah");
+            editor.putInt("nilai", nilai + 0).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
@@ -124,6 +135,7 @@ public class LatihanDasar3Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });

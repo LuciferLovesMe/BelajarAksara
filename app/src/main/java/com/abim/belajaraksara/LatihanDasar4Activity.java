@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -39,6 +40,14 @@ public class LatihanDasar4Activity extends AppCompatActivity implements View.OnC
         c[7] = LatihanDasar8Activity.class;
     }
 
+    void ins(String s){
+        DBHelper helper = new DBHelper(ctx);
+        SQLiteDatabase db;
+        db = helper.getWritableDatabase();
+        String query = "insert into hasil values(null, 'pretest_dasar', '"+s+"')";
+        db.execSQL(query);
+    }
+
     @Override
     public void onClick(View view) {
 
@@ -68,6 +77,7 @@ public class LatihanDasar4Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -96,6 +106,7 @@ public class LatihanDasar4Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -124,6 +135,7 @@ public class LatihanDasar4Activity extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });

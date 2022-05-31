@@ -40,6 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
         DBHelper dh;
 //        String query = "select * from hasil where nama = 'dasar'";
         Cursor cursor = getReadableDatabase().rawQuery(query, null);
+        int i = 1;
 
         while (cursor.moveToNext()){
             l.add(new BarEntry(Float.valueOf(cursor.getString(0)), Float.valueOf(cursor.getString(2))));
@@ -51,5 +52,29 @@ public class DBHelper extends SQLiteOpenHelper {
 //        l.add(new BarEntry(1, 50));
 
         return l;
+    }
+
+    public int checking(String nama){
+        String query = "select count(*) from hasil where nama = '"+nama+"'";
+        Cursor cursor = getReadableDatabase().rawQuery(query, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+
+        return  count;
+    }
+
+    public int pre(String nama){
+        if (checking(nama) > 0){
+
+            String query = "select * from hasil where nama = '"+nama+"' limit 1";
+            Cursor cursor = getReadableDatabase().rawQuery(query, null);
+            cursor.moveToFirst();
+            int count = cursor.getInt(2);
+            cursor.close();
+            return count;
+        }
+
+        return 0;
     }
 }

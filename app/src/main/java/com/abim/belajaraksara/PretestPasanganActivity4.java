@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,14 @@ public class PretestPasanganActivity4 extends AppCompatActivity implements View.
         c[7] = PretestPasanganActivity8.class;
     }
 
+    void ins(String s){
+        DBHelper helper = new DBHelper(ctx);
+        SQLiteDatabase db;
+        db = helper.getWritableDatabase();
+        String query = "insert into hasil values(null, 'pretest_pasangan', '"+s+"')";
+        db.execSQL(query);
+    }
+
     @Override
     public void onClick(View view) {
         int id = view.getId();
@@ -65,6 +74,7 @@ public class PretestPasanganActivity4 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
@@ -93,6 +103,7 @@ public class PretestPasanganActivity4 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
@@ -121,6 +132,7 @@ public class PretestPasanganActivity4 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
