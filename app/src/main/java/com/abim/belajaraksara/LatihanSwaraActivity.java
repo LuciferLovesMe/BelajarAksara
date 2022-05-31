@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,8 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
     PretestAngka p;
     int count, nilai;
     String key = "latihan_swara";
+    DBHelper helper;
+    SQLiteDatabase db ;
 
 
     @Override
@@ -28,6 +31,8 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_latihan_swara);
 
         ctx = this;
+        helper = new DBHelper(ctx);
+        db = helper.getWritableDatabase();
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();
         if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) > 0){
             editor.putInt("nilai", 0).commit();
@@ -73,6 +78,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'swara', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });
@@ -101,6 +107,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'swara', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });
@@ -129,6 +136,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'swara', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
                     }
                 });

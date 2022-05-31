@@ -116,11 +116,11 @@ public class SwaraActivity extends AppCompatActivity implements View.OnClickList
         }
 
         else if (id == R.id.pretest){
-            startActivity(new Intent(getApplicationContext(), PretestSandhanganActivity.class));
+            startActivity(new Intent(getApplicationContext(), PretestSwaraActivity.class));
         }
 
         else if (id == R.id.latihan){
-            startActivity(new Intent(getApplicationContext(), LatihanSandhanganActivity.class));
+            startActivity(new Intent(getApplicationContext(), LatihanSwaraActivity.class));
         }
     }
 }

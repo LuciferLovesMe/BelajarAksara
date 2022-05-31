@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,8 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
     PretestAngka p;
     int count, nilai;
     String key = "evaluasi";
+    DBHelper helper;
+    SQLiteDatabase db ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,17 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_soal_evaluasi7);
 
         ctx = this;
+        helper = new DBHelper(ctx);
+        db = helper.getWritableDatabase();
+
+        c[0] = SoalEvaluasiActivity9.class;
+        c[1] = SoalEvaluasiActivity2.class;
+        c[2] = SoalEvaluasiActivity3.class;
+        c[3] = SoalEvaluasiActivity4.class;
+        c[4] = SoalEvaluasiActivity5.class;
+        c[5] = SoalEvaluasiActivity6.class;
+        c[6] = SoalEvaluasiActivity1.class;
+        c[7] = SoalEvaluasiActivity8.class;
     }
 
     @Override
@@ -57,6 +71,7 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'evaluasi', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                     }
                 });
@@ -85,6 +100,7 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'evaluasi', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                     }
                 });
@@ -113,6 +129,7 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'evaluasi', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                     }
                 });
@@ -141,6 +158,7 @@ public class SoalEvaluasiActivity7 extends AppCompatActivity implements View.OnC
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'evaluasi', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                     }
                 });

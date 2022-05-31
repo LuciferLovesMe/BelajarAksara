@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
     PretestDasar p;
     int count, nilai;
     String key = "pretest_dasar";
+    DBHelper helper;
+    SQLiteDatabase db ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_pretest_dasar);
 
         ctx = this;
+        helper = new DBHelper(ctx);
+        db = helper.getWritableDatabase();
         p = new PretestDasar(ctx);
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();
         if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) > 0){
@@ -73,6 +78,7 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'dasar', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -101,6 +107,7 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'dasar', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });
@@ -129,6 +136,7 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'dasar', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), DasarActivity.class));
                     }
                 });

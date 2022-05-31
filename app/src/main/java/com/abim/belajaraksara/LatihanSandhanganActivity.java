@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,8 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
     PretestAngka p;
     int count, nilai;
     String key = "latihan_sandhangan";
+    DBHelper helper;
+    SQLiteDatabase db ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,8 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         }
 
         ctx = this;
+        helper = new DBHelper(ctx);
+        db = helper.getWritableDatabase();
 
         c[0] = LatihanSandhanganActivity1.class;
         c[1] = LatihanSandhanganActivity2.class;
@@ -73,6 +78,7 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                     }
                 });
@@ -101,6 +107,7 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                     }
                 });
@@ -129,6 +136,7 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                     }
                 });

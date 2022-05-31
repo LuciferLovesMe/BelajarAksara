@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,8 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
     PretestAngka p;
     int count, nilai;
     String key = "latihan_pasangan";
+    DBHelper helper;
+    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
         setContentView(R.layout.activity_latihan_pasangan5);
 
         ctx = this;
+        helper = new DBHelper(ctx);
+        db = helper.getWritableDatabase();
 
         c[0] = LatihanAngkaActivity9.class;
         c[1] = LatihanAngkaActivity2.class;
@@ -66,6 +71,7 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'pasangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
@@ -94,6 +100,7 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'pasangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });
@@ -122,6 +129,7 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        db.execSQL("insert into hasil values(null, 'pasangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
                         startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                     }
                 });

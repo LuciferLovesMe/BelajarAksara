@@ -27,5 +27,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         else if (id == R.id.card_evaluasi){
             startActivity(new Intent(getApplicationContext(), SoalEvaluasiActivity.class));
         }
+
+        else if (id == R.id.card_chart){
+            startActivity(new Intent(getApplicationContext(), ChartDashboardActivity.class));
+        }
     }
 }
