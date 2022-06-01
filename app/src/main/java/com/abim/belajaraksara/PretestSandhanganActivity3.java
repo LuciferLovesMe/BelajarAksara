@@ -30,14 +30,14 @@ public class PretestSandhanganActivity3 extends AppCompatActivity implements Vie
 
         ctx = this;
 
-        c[0] = LatihanPasanganActivity1.class;
-        c[1] = LatihanPasanganActivity2.class;
-        c[2] = LatihanPasanganActivity9.class;
-        c[3] = LatihanPasanganActivity4.class;
-        c[4] = LatihanPasanganActivity5.class;
-        c[5] = LatihanPasanganActivity6.class;
-        c[6] = LatihanPasanganActivity7.class;
-        c[7] = LatihanPasanganActivity8.class;
+        c[0] = PretestSandhanganActivity1.class;
+        c[1] = PretestSandhanganActivity2.class;
+        c[2] = PretestSandhanganActivity9.class;
+        c[3] = PretestSandhanganActivity4.class;
+        c[4] = PretestSandhanganActivity5.class;
+        c[5] = PretestSandhanganActivity6.class;
+        c[6] = PretestSandhanganActivity7.class;
+        c[7] = PretestSandhanganActivity8.class;
     }
 
     void ins(String s){

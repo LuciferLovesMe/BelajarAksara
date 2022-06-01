@@ -47,6 +47,12 @@ public class PretestPasanganActivity3 extends AppCompatActivity implements View.
     }
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
         int id = view.getId();
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();

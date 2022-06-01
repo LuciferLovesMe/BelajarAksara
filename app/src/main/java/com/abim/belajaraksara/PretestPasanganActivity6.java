@@ -38,6 +38,12 @@ public class PretestPasanganActivity6 extends AppCompatActivity implements View.
         c[7] = PretestPasanganActivity8.class;
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
+        finish();
+    }
+
     void ins(String s){
         DBHelper helper = new DBHelper(ctx);
         SQLiteDatabase db;

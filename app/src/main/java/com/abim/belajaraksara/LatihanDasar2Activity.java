@@ -41,6 +41,12 @@ public class LatihanDasar2Activity extends AppCompatActivity implements View.OnC
         c[7] = LatihanDasar8Activity.class;
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+        finish();
+    }
+
     void ins(String s){
         DBHelper helper = new DBHelper(ctx);
         SQLiteDatabase db;

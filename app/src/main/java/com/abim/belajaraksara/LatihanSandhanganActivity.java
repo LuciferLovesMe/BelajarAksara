@@ -52,6 +52,12 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         check();
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
+        finish();
+    }
+
     public void check(){
         int c = helper.checking("sandhangan");
         if (c >= 10){

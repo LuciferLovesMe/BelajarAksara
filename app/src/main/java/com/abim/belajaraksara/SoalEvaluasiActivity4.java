@@ -44,6 +44,12 @@ public class SoalEvaluasiActivity4 extends AppCompatActivity implements View.OnC
     }
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
 
         int id = view.getId();

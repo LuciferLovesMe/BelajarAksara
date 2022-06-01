@@ -27,7 +27,7 @@ public class SwaraActivity extends AppCompatActivity implements View.OnClickList
     void setText(){
         DBHelper helper = new DBHelper(ctx);
         TextView tv = findViewById(R.id.tv_nilai);
-        tv.setText("Skor Pretest Kamu : " + String.valueOf(helper.pre("pretest_angka")));
+        tv.setText("Skor Pretest Kamu : " + String.valueOf(helper.pre("pretest_swara")));
     }
 
     @Override

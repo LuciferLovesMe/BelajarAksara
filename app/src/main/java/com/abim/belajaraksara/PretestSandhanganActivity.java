@@ -35,15 +35,15 @@ public class PretestSandhanganActivity extends AppCompatActivity implements View
             editor.putInt("count", 0).commit();
         }
 
-        c[0] = LatihanPasanganActivity1.class;
-        c[1] = PretestPasanganActivity2.class;
-        c[2] = PretestPasanganActivity3.class;
-        c[3] = PretestPasanganActivity4.class;
-        c[4] = PretestPasanganActivity5.class;
-        c[5] = PretestPasanganActivity6.class;
-        c[6] = PretestPasanganActivity7.class;
-        c[7] = PretestPasanganActivity8.class;
-        c[8] = PretestPasanganActivity9.class;
+        c[0] = PretestSandhanganActivity1.class;
+        c[1] = PretestSandhanganActivity2.class;
+        c[2] = PretestSandhanganActivity3.class;
+        c[3] = PretestSandhanganActivity4.class;
+        c[4] = PretestSandhanganActivity5.class;
+        c[5] = PretestSandhanganActivity6.class;
+        c[6] = PretestSandhanganActivity7.class;
+        c[7] = PretestSandhanganActivity8.class;
+        c[8] = PretestSandhanganActivity9.class;
     }
 
     void ins(String s){

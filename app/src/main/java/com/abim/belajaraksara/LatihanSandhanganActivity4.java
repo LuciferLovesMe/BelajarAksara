@@ -44,6 +44,12 @@ public class LatihanSandhanganActivity4 extends AppCompatActivity implements Vie
     }
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
         int id = view.getId();
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();

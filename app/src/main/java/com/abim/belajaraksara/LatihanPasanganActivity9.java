@@ -33,14 +33,20 @@ public class LatihanPasanganActivity9 extends AppCompatActivity implements View.
         helper = new DBHelper(ctx);
         db = helper.getWritableDatabase();
 
-        c[0] = LatihanAngkaActivity1.class;
-        c[1] = LatihanAngkaActivity2.class;
-        c[2] = LatihanAngkaActivity3.class;
-        c[3] = LatihanAngkaActivity4.class;
-        c[4] = LatihanAngkaActivity5.class;
-        c[5] = LatihanAngkaActivity6.class;
-        c[6] = LatihanAngkaActivity7.class;
-        c[7] = LatihanAngkaActivity8.class;
+        c[0] = LatihanPasanganActivity1.class;
+        c[1] = LatihanPasanganActivity2.class;
+        c[2] = LatihanPasanganActivity3.class;
+        c[3] = LatihanPasanganActivity4.class;
+        c[4] = LatihanPasanganActivity5.class;
+        c[5] = LatihanPasanganActivity6.class;
+        c[6] = LatihanPasanganActivity7.class;
+        c[7] = LatihanPasanganActivity8.class;
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
+        finish();
     }
 
     @Override

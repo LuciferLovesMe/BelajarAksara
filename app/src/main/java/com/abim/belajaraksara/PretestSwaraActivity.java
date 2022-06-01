@@ -35,22 +35,22 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
             editor.putInt("count", 0).commit();
         }
 
-        c[0] = LatihanAngkaActivity1.class;
-        c[1] = LatihanAngkaActivity2.class;
-        c[2] = LatihanAngkaActivity3.class;
-        c[3] = LatihanAngkaActivity4.class;
-        c[4] = LatihanAngkaActivity5.class;
-        c[5] = LatihanAngkaActivity6.class;
-        c[6] = LatihanAngkaActivity7.class;
-        c[7] = LatihanAngkaActivity8.class;
-        c[8] = LatihanAngkaActivity9.class;
+        c[0] = LatihanSwaraActivity1.class;
+        c[1] = LatihanSwaraActivity2.class;
+        c[2] = LatihanSwaraActivity3.class;
+        c[3] = LatihanSwaraActivity4.class;
+        c[4] = LatihanSwaraActivity5.class;
+        c[5] = LatihanSwaraActivity6.class;
+        c[6] = LatihanSwaraActivity7.class;
+        c[7] = LatihanSwaraActivity8.class;
+        c[8] = LatihanSwaraActivity9.class;
     }
 
     void ins(String s){
         DBHelper helper = new DBHelper(ctx);
         SQLiteDatabase db;
         db = helper.getWritableDatabase();
-        String query = "insert into hasil values(null, 'pretest_sandhangan', '"+s+"')";
+        String query = "insert into hasil values(null, 'pretest_swara', '"+s+"')";
         db.execSQL(query);
     }
 

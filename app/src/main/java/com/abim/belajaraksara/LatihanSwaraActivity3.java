@@ -44,6 +44,12 @@ public class LatihanSwaraActivity3 extends AppCompatActivity implements View.OnC
     }
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
         int id = view.getId();
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();

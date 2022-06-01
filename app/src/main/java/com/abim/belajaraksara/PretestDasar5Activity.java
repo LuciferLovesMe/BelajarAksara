@@ -46,6 +46,12 @@ public class PretestDasar5Activity extends AppCompatActivity implements View.OnC
     }
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+        finish();
+    }
+
+    @Override
     public void onClick(View view) {
         int id = view.getId();
         SharedPreferences.Editor editor = getSharedPreferences(key, MODE_PRIVATE).edit();

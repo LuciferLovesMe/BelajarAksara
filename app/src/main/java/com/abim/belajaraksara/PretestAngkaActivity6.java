@@ -41,6 +41,12 @@ public class PretestAngkaActivity6 extends AppCompatActivity implements View.OnC
         c[7] = PretestAngkaActivity8.class;
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
+        finish();
+    }
+
     void ins(String s){
         DBHelper helper = new DBHelper(ctx);
         SQLiteDatabase db;

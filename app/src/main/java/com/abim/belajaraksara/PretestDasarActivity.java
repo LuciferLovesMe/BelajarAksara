@@ -52,6 +52,12 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
         check();
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), DasarActivity.class));
+        finish();
+    }
+
     public void check(){
         int c = helper.checking("dasar");
         if (c >= 10){

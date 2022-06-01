@@ -52,6 +52,12 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
         check();
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
+        finish();
+    }
+
     public void check(){
         int c = helper.checking("swara");
         if (c >= 10){
