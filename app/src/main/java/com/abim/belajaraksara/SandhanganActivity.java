@@ -25,7 +25,7 @@ public class SandhanganActivity extends AppCompatActivity implements View.OnClic
     void setText(){
         DBHelper helper = new DBHelper(ctx);
         TextView tv = findViewById(R.id.tv_nilai);
-        tv.setText(helper.pre("Skor Pretest Kamu : " + String.valueOf("pretest_sandhangan")));
+        tv.setText("Skor Pretest Kamu : " + helper.pre(String.valueOf("pretest_sandhangan")));
     }
 
     @Override
