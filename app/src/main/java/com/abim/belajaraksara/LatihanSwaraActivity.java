@@ -61,7 +61,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
     public void check(){
         int c = helper.checking("swara");
         if (c >= 10){
-            String query = "delete from hasil where name = 'swara'";
+            String query = "delete from hasil where nama = 'swara'";
             db.execSQL(query);
         }
     }

@@ -61,7 +61,7 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
     public void check(){
         int c = helper.checking("sandhangan");
         if (c >= 10){
-            String query = "delete from hasil where name = 'sandhangan'";
+            String query = "delete from hasil where nama = 'sandhangan'";
             db.execSQL(query);
         }
     }
