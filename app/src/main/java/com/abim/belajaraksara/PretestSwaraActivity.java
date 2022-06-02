@@ -35,15 +35,21 @@ public class PretestSwaraActivity extends AppCompatActivity implements View.OnCl
             editor.putInt("count", 0).commit();
         }
 
-        c[0] = LatihanSwaraActivity1.class;
-        c[1] = LatihanSwaraActivity2.class;
-        c[2] = LatihanSwaraActivity3.class;
-        c[3] = LatihanSwaraActivity4.class;
-        c[4] = LatihanSwaraActivity5.class;
-        c[5] = LatihanSwaraActivity6.class;
-        c[6] = LatihanSwaraActivity7.class;
-        c[7] = LatihanSwaraActivity8.class;
-        c[8] = LatihanSwaraActivity9.class;
+        c[0] = PretestSwaraActivity1.class;
+        c[1] = PretestSwaraActivity2.class;
+        c[2] = PretestSwaraActivity3.class;
+        c[3] = PretestSwaraActivity4.class;
+        c[4] = PretestSwaraActivity5.class;
+        c[5] = PretestSwaraActivity6.class;
+        c[6] = PretestSwaraActivity7.class;
+        c[7] = PretestSwaraActivity8.class;
+        c[8] = PretestSwaraActivity9.class;
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), SwaraActivity.class));
+        finish();
     }
 
     void ins(String s){

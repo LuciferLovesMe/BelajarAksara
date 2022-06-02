@@ -63,9 +63,9 @@ public class LatihanDasar2Activity extends AppCompatActivity implements View.OnC
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
-            editor.putInt("nilai", nilai + 0);
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
+            editor.putInt("nilai", nilai + 10);
             editor.putInt("count", count + 1);
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {

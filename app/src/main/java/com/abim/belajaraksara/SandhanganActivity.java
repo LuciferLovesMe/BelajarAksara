@@ -22,6 +22,12 @@ public class SandhanganActivity extends AppCompatActivity implements View.OnClic
         setText();
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+        finish();
+    }
+
     void setText(){
         DBHelper helper = new DBHelper(ctx);
         TextView tv = findViewById(R.id.tv_nilai);
