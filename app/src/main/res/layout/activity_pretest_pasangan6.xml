@@ -71,7 +71,7 @@
                         android:id="@+id/c"
                         android:onClick="onClick"
                         android:layout_margin="15dp"
-                        android:text="na"/>
+                        android:text="ya"/>
 
                 </GridLayout>
 

@@ -57,9 +57,9 @@ public class LatihanSandhanganActivity5 extends AppCompatActivity implements Vie
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Benar");
-            dialog.setMessage("Jawaban Kamu Benar");
-            editor.putInt("nilai", nilai + 10).commit();
+            dialog.setTitle("Salah");
+            dialog.setMessage("Jawaban Kamu Salah");
+            editor.putInt("nilai", nilai + 0).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
@@ -86,7 +86,7 @@ public class LatihanSandhanganActivity5 extends AppCompatActivity implements Vie
         }
         else if (id == R.id.b){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Benar");
+            dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
             editor.putInt("count", count + 1).commit();
@@ -115,9 +115,9 @@ public class LatihanSandhanganActivity5 extends AppCompatActivity implements Vie
         }
         else if (id == R.id.c){
             dialog = new AlertDialog.Builder(ctx).create();
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
-            editor.putInt("nilai", nilai + 0).commit();
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
+            editor.putInt("nilai", nilai + 10).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {

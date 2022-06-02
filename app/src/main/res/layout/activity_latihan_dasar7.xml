@@ -54,14 +54,14 @@
                     android:onClick="onClick"
                     android:layout_margin="15dp"
                     android:layout_columnWeight="1"
-                    android:text="ga"/>
+                    android:text="dha"/>
 
                 <Button
                     android:id="@+id/b"
                     android:onClick="onClick"
                     android:layout_margin="15dp"
                     android:layout_columnWeight="1"
-                    android:text="ra"/>
+                    android:text="nya"/>
 
                 <Button
                     android:id="@+id/c"

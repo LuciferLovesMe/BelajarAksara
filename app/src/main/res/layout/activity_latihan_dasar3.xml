@@ -38,7 +38,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/pa"
+                    android:src="@drawable/ga"
                     android:background="@color/white"/>
 
             </LinearLayout>
@@ -54,21 +54,21 @@
                     android:onClick="onClick"
                     android:layout_margin="15dp"
                     android:layout_columnWeight="1"
-                    android:text="pa"/>
+                    android:text="ga"/>
 
                 <Button
                     android:id="@+id/b"
                     android:onClick="onClick"
                     android:layout_margin="15dp"
                     android:layout_columnWeight="1"
-                    android:text="ha"/>
+                    android:text="ra"/>
 
                 <Button
                     android:id="@+id/c"
                     android:onClick="onClick"
                     android:layout_margin="15dp"
                     android:layout_columnWeight="1"
-                    android:text="wa"/>
+                    android:text="sa"/>
 
             </GridLayout>
 
