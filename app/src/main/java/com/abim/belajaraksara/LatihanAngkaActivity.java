@@ -47,8 +47,6 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
         c[6] = LatihanAngkaActivity7.class;
         c[7] = LatihanAngkaActivity8.class;
         c[8] = LatihanAngkaActivity9.class;
-
-        check();
     }
 
     public void check(){
@@ -81,6 +79,8 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -110,6 +110,8 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -139,6 +141,8 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });

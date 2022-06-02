@@ -48,8 +48,6 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
         c[6] = PretestDasar7Activity.class;
         c[7] = PretestDasar8Activity.class;
         c[8] = PretestDasar9Activity.class;
-
-        check();
     }
 
     @Override
@@ -82,6 +80,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -111,6 +111,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -140,6 +142,8 @@ public class PretestDasarActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });

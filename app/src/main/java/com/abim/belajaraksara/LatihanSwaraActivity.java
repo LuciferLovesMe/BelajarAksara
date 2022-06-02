@@ -82,6 +82,8 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -111,6 +113,8 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -140,6 +144,8 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });

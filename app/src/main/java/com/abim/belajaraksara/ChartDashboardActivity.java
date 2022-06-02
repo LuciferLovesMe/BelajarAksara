@@ -33,7 +33,7 @@ public class ChartDashboardActivity extends AppCompatActivity implements View.On
             startActivity(new Intent(getApplicationContext(), ChartPasanganActivity.class));
         }
         else if (id == R.id.card_evaluasi){
-            startActivity(new Intent(getApplicationContext(), ChartPasanganActivity.class));
+            startActivity(new Intent(getApplicationContext(), ChartEvaluasiActivity.class));
         }
 
     }

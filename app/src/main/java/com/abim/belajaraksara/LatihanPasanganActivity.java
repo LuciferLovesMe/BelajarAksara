@@ -47,8 +47,6 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
         c[6] = LatihanPasanganActivity7.class;
         c[7] = LatihanPasanganActivity8.class;
         c[8] = LatihanPasanganActivity8.class;
-
-        check();
     }
 
     @Override
@@ -81,6 +79,8 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -110,6 +110,8 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
@@ -139,6 +141,8 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                        check();
                         startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
                     }
                 });
