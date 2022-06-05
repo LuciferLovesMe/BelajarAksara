@@ -9,6 +9,7 @@ import android.util.Log;
 import androidx.annotation.IntegerRes;
 
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,25 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public ArrayList<BarEntry> getData(String query){
         ArrayList<BarEntry> l = new ArrayList<>();
+        DBHelper dh;
+//        String query = "select * from hasil where nama = 'dasar'";
+        Cursor cursor = getReadableDatabase().rawQuery(query, null);
+        int i = 1;
+
+        while (cursor.moveToNext()){
+            l.add(new BarEntry(Float.valueOf(cursor.getString(0)), Float.valueOf(cursor.getString(2))));
+        }
+//        cursor.close();
+//        l.add(new BarEntry(1, 20));
+//        l.add(new BarEntry(1, 30));
+//        l.add(new BarEntry(1, 40));
+//        l.add(new BarEntry(1, 50));
+
+        return l;
+    }
+
+    public ArrayList<Entry> getLine(String query){
+        ArrayList<Entry> l = new ArrayList<Entry>();
         DBHelper dh;
 //        String query = "select * from hasil where nama = 'dasar'";
         Cursor cursor = getReadableDatabase().rawQuery(query, null);
