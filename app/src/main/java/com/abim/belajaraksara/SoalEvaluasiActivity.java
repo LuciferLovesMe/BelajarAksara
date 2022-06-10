@@ -48,12 +48,22 @@ public class SoalEvaluasiActivity extends AppCompatActivity implements View.OnCl
         c[6] = SoalEvaluasiActivity7.class;
         c[7] = SoalEvaluasiActivity8.class;
         c[8] = SoalEvaluasiActivity9.class;
+
+        check();
     }
 
     @Override
     public void onBackPressed() {
         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
         finish();
+    }
+
+    public void check(){
+        int c = helper.checking("evaluasi");
+        if (c >= 9){
+            String query = "delete from hasil where nama = 'dasar'";
+            db.execSQL(query);
+        }
     }
 
     @Override

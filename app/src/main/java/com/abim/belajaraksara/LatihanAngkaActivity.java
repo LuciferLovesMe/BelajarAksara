@@ -51,7 +51,7 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
 
     public void check(){
         int c = helper.checking("angka");
-        if (c >= 10){
+        if (c >= 9){
             String query = "delete from hasil where nama = 'angka'";
             db.execSQL(query);
         }
