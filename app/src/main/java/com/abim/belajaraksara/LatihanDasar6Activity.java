@@ -38,6 +38,13 @@ public class LatihanDasar6Activity extends AppCompatActivity implements View.OnC
         c[5] = LatihanDasar1Activity.class;
         c[6] = LatihanDasar7Activity.class;
         c[7] = LatihanDasar8Activity.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

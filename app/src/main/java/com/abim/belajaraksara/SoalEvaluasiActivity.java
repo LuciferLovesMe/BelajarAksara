@@ -50,6 +50,13 @@ public class SoalEvaluasiActivity extends AppCompatActivity implements View.OnCl
         c[8] = SoalEvaluasiActivity9.class;
 
         check();
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

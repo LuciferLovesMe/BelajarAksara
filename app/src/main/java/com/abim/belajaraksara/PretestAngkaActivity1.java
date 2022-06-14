@@ -40,6 +40,13 @@ public class PretestAngkaActivity1 extends AppCompatActivity implements View.OnC
         c[6] = PretestAngkaActivity7.class;
         c[7] = PretestAngkaActivity8.class;
         c[8] = PretestAngkaActivity9.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

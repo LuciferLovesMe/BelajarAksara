@@ -47,6 +47,13 @@ public class LatihanAngkaActivity extends AppCompatActivity implements View.OnCl
         c[6] = LatihanAngkaActivity7.class;
         c[7] = LatihanAngkaActivity8.class;
         c[8] = LatihanAngkaActivity9.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     public void check(){

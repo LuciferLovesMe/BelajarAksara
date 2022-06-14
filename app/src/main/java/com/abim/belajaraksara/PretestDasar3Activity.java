@@ -43,6 +43,13 @@ public class PretestDasar3Activity extends AppCompatActivity implements View.OnC
         c[5] = PretestDasar6Activity.class;
         c[6] = PretestDasar7Activity.class;
         c[7] = PretestDasar8Activity.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

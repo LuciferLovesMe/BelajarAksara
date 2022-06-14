@@ -43,6 +43,13 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
         c[6] = PretestPasanganActivity7.class;
         c[7] = PretestPasanganActivity8.class;
         c[8] = PretestPasanganActivity9.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

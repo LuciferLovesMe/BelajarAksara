@@ -37,6 +37,13 @@ public class PretestSwaraActivity6 extends AppCompatActivity implements View.OnC
         c[5] = PretestSwaraActivity6.class;
         c[6] = PretestSwaraActivity7.class;
         c[7] = PretestSwaraActivity8.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

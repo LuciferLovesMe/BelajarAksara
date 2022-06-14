@@ -37,6 +37,13 @@ public class PretestSandhanganActivity9 extends AppCompatActivity implements Vie
         c[5] = PretestSandhanganActivity6.class;
         c[6] = PretestSandhanganActivity7.class;
         c[7] = PretestSandhanganActivity8.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     void ins(String s){

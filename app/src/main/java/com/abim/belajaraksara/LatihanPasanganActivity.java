@@ -47,6 +47,13 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
         c[6] = LatihanPasanganActivity7.class;
         c[7] = LatihanPasanganActivity8.class;
         c[8] = LatihanPasanganActivity8.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override

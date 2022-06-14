@@ -41,6 +41,13 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
         c[5] = LatihanSandhanganActivity6.class;
         c[6] = LatihanSandhanganActivity7.class;
         c[7] = LatihanSandhanganActivity8.class;
+
+        setTitle();
+    }
+
+    private void setTitle(){
+        int num = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) + 1;
+        getSupportActionBar().setTitle("Soal Nomor " + String.valueOf(num));
     }
 
     @Override
