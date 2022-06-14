@@ -57,7 +57,7 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
 
     public void check(){
         int c = helper.checking("pasangan");
-        if (c >= 9){
+        if (c >= 10){
             String query = "delete from hasil where nama = 'pasangan'";
             db.execSQL(query);
         }

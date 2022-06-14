@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                finish();
             }
         },2500);
     }

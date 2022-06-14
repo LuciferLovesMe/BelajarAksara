@@ -60,7 +60,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
 
     public void check(){
         int c = helper.checking("swara");
-        if (c >= 9){
+        if (c >= 10){
             String query = "delete from hasil where nama = 'swara'";
             db.execSQL(query);
         }
@@ -84,7 +84,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         check();
-                        startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
+                        startActivity(new Intent(getApplicationContext(), c[r.nextInt(c.length - 1)]));
                     }
                 });
                 dialog.show();
@@ -115,7 +115,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         check();
-                        startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
+                        startActivity(new Intent(getApplicationContext(), c[r.nextInt(c.length - 1)]));
                     }
                 });
                 dialog.show();
@@ -146,7 +146,7 @@ public class LatihanSwaraActivity extends AppCompatActivity implements View.OnCl
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         check();
-                        startActivity(new Intent(ctx, c[r.nextInt(c.length)]));
+                        startActivity(new Intent(getApplicationContext(), c[r.nextInt(c.length - 1)]));
                     }
                 });
                 dialog.show();

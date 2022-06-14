@@ -60,8 +60,8 @@ public class SoalEvaluasiActivity extends AppCompatActivity implements View.OnCl
 
     public void check(){
         int c = helper.checking("evaluasi");
-        if (c >= 9){
-            String query = "delete from hasil where nama = 'dasar'";
+        if (c >= 10){
+            String query = "delete from hasil where nama = 'evaluasi'";
             db.execSQL(query);
         }
     }
