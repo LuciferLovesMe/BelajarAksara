@@ -81,7 +81,11 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });
@@ -110,7 +114,11 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });
@@ -139,7 +147,11 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });

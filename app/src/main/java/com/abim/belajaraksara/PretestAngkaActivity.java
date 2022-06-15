@@ -94,7 +94,11 @@ public class PretestAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
+                        ins(String.valueOf(n));
                         startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });
@@ -123,7 +127,11 @@ public class PretestAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
+                        ins(String.valueOf(n));
                         startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });
@@ -152,7 +160,11 @@ public class PretestAngkaActivity extends AppCompatActivity implements View.OnCl
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        ins(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
+                        ins(String.valueOf(n));
                         startActivity(new Intent(getApplicationContext(), AngkaActivity.class));
                     }
                 });

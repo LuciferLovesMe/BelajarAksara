@@ -64,6 +64,8 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
@@ -81,7 +83,11 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });
@@ -93,6 +99,8 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
         }
         else if (id == R.id.b){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
@@ -110,7 +118,11 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });
@@ -122,6 +134,8 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
         }
         else if (id == R.id.c){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Benar");
             dialog.setMessage("Jawaban Kamu Benar");
             editor.putInt("nilai", nilai + 10).commit();
@@ -139,7 +153,11 @@ public class LatihanSandhanganActivity9 extends AppCompatActivity implements Vie
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)))+"');");
+                                int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                                if (n > 100){
+                                    n = 100;
+                                }
+                                db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
                                 startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
                             }
                         });

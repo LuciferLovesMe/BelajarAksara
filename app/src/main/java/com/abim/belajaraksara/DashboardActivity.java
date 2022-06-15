@@ -41,6 +41,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     public void onBackPressed() {
         if (backTime + 2000 > System.currentTimeMillis()){
             super.onBackPressed();
+            finishAffinity();
             return;
         }
         else{

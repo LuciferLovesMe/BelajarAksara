@@ -79,6 +79,8 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
@@ -110,6 +112,8 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         }
         else if (id == R.id.b){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Benar");
             dialog.setMessage("Jawaban Kamu Benar");
             editor.putInt("nilai", nilai + 10).commit();
@@ -141,6 +145,8 @@ public class LatihanSandhanganActivity extends AppCompatActivity implements View
         }
         else if (id == R.id.c){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
