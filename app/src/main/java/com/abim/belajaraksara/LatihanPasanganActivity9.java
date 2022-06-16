@@ -78,8 +78,12 @@ public class LatihanPasanganActivity9 extends AppCompatActivity implements View.
                     }
                     else{
                         dialog = new AlertDialog.Builder(ctx).create();
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
                         dialog.setTitle("Latihan Selesai");
-                        dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        dialog.setMessage("Nilai Kamu " + String.valueOf(n));
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {

@@ -74,6 +74,8 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
         count = getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0);
         if (id == R.id.a){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
@@ -86,8 +88,12 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
                     }
                     else{
                         dialog = new AlertDialog.Builder(ctx).create();
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
                         dialog.setTitle("Latihan Selesai");
-                        dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        dialog.setMessage("Nilai Kamu " + String.valueOf(n));
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -107,6 +113,8 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
         }
         else if (id == R.id.b){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Salah");
             dialog.setMessage("Jawaban Kamu Salah");
             editor.putInt("nilai", nilai + 0).commit();
@@ -119,8 +127,12 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
                     }
                     else{
                         dialog = new AlertDialog.Builder(ctx).create();
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
                         dialog.setTitle("Latihan Selesai");
-                        dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        dialog.setMessage("Nilai Kamu " + String.valueOf(n));
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -140,6 +152,8 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
         }
         else if (id == R.id.c){
             dialog = new AlertDialog.Builder(ctx).create();
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.setTitle("Benar");
             dialog.setMessage("Jawaban Kamu Benar");
             editor.putInt("nilai", nilai + 10).commit();
@@ -152,8 +166,12 @@ public class PretestPasanganActivity extends AppCompatActivity implements View.O
                     }
                     else{
                         dialog = new AlertDialog.Builder(ctx).create();
+                        int n = getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0);
+                        if (n > 100){
+                            n = 100;
+                        }
                         dialog.setTitle("Latihan Selesai");
-                        dialog.setMessage("Nilai Kamu " + String.valueOf(getSharedPreferences(key, MODE_PRIVATE).getInt("nilai", 0)));
+                        dialog.setMessage("Nilai Kamu " + String.valueOf(n));
                         dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
