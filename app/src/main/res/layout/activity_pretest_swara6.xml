@@ -57,33 +57,40 @@
 
                 </LinearLayout>
 
-                <GridLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:columnCount="3">
+                    android:columnCount="3"
+                    android:orientation="vertical">
 
                     <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:id="@+id/a"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_margin="5dp"
                         android:text="organ"/>
 
                     <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:id="@+id/b"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_margin="5dp"
                         android:text="origami"
                         android:textSize="12sp"/>
 
                     <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:id="@+id/c"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_margin="5dp"
                         android:text="organisasi"
-                        android:textSize="10sp"/>
+                        android:textSize="12sp"/>
 
-                </GridLayout>
+                </LinearLayout>
 
 
             </LinearLayout>

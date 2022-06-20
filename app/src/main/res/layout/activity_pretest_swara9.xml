@@ -72,9 +72,10 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/swara_10a" />
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/a"
+                                android:background="@color/white"/>
 
                         </LinearLayout>
 
@@ -96,8 +97,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="140dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 android:src="@drawable/swara_10b"
                                 android:background="@color/white"/>
 
@@ -121,8 +122,8 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
                                 android:src="@drawable/swara_10c"
                                 android:background="@color/white"/>
 

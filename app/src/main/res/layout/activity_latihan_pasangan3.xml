@@ -44,7 +44,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pasangan aksara “ s “ yaiku ...."
+                        android:text="Pasangan aksara “ sa “ yaiku ...."
                         android:textSize="20sp"
                         android:textColor="@color/white"/>
 
@@ -72,9 +72,10 @@
                             android:gravity="center">
 
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/pasangan_4a" />
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/sa_pasangan"
+                                android:background="@color/white"/>
 
                         </LinearLayout>
 

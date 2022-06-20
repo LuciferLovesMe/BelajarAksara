@@ -50,31 +50,85 @@
 
                 </LinearLayout>
 
-                <GridLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:columnCount="3">
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
 
-                    <Button
-                        android:id="@+id/a"
-                        android:onClick="onClick"
-                        android:layout_margin="15dp"
-                        android:text="  pꦢ꧀ꦩ"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp">
 
-                    <Button
-                        android:id="@+id/b"
-                        android:onClick="onClick"
-                        android:layout_margin="15dp"
-                        android:text="pam"/>
+                        <LinearLayout
+                            android:background="@color/sunflower"
+                            android:id="@+id/a"
+                            android:onClick="onClick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center">
 
-                    <Button
-                        android:id="@+id/c"
-                        android:onClick="onClick"
-                        android:layout_margin="15dp"
-                        android:text="pꦩ꧀ꦢ"/>
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/soal_1" />
 
-                </GridLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:background="@color/sunflower"
+                            android:id="@+id/b"
+                            android:onClick="onClick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/soal_2" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp">
+
+                        <LinearLayout
+                            android:background="@color/sunflower"
+                            android:id="@+id/c"
+                            android:onClick="onClick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/soal_3" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
 
             </LinearLayout>

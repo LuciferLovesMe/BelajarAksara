@@ -67,19 +67,19 @@
                         android:id="@+id/a"
                         android:onClick="onClick"
                         android:layout_margin="15dp"
-                        android:text="k"/>
+                        android:text="ka"/>
 
                     <Button
                         android:id="@+id/b"
                         android:onClick="onClick"
                         android:layout_margin="15dp"
-                        android:text="n"/>
+                        android:text="na"/>
 
                     <Button
                         android:id="@+id/c"
                         android:onClick="onClick"
                         android:layout_margin="15dp"
-                        android:text="c"/>
+                        android:text="ca"/>
 
                 </GridLayout>
 

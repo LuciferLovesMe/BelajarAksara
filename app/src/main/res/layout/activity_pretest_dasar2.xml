@@ -74,7 +74,7 @@
                     android:id="@+id/c"
                     android:onClick="onClick"
                     android:layout_margin="10dp"
-                    android:background="@drawable/dua_c"/>
+                    android:background="@drawable/image015"/>
 
             </LinearLayout>
 
