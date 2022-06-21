@@ -70,11 +70,11 @@
 
                 <ImageButton
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:id="@+id/c"
                     android:onClick="onClick"
                     android:layout_margin="10dp"
-                    android:background="@drawable/image015"/>
+                    android:background="@drawable/image016"/>
 
             </LinearLayout>
 

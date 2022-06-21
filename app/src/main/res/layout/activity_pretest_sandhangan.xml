@@ -49,31 +49,35 @@
 
                 </LinearLayout>
 
-                <GridLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:columnCount="3">
+                    android:columnCount="3"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/a"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="suku"/>
 
                     <Button
                         android:id="@+id/b"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="wulu"/>
 
                     <Button
                         android:id="@+id/c"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="taling"/>
 
-                </GridLayout>
+                </LinearLayout>
 
 
             </LinearLayout>

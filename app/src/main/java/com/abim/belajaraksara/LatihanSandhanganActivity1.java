@@ -90,7 +90,7 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                                     n = 100;
                                 }
                                 db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
-                                startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
+                                startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                             }
                         });
                         dialog.show();
@@ -127,7 +127,7 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                                     n = 100;
                                 }
                                 db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
-                                startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
+                                startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                             }
                         });
                         dialog.show();
@@ -164,7 +164,7 @@ public class LatihanSandhanganActivity1 extends AppCompatActivity implements Vie
                                     n = 100;
                                 }
                                 db.execSQL("insert into hasil values(null, 'sandhangan', '"+String.valueOf(n)+"');");
-                                startActivity(new Intent(getApplicationContext(), PasanganActivity.class));
+                                startActivity(new Intent(getApplicationContext(), SandhanganActivity.class));
                             }
                         });
                         dialog.show();

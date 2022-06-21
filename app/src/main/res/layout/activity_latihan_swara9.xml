@@ -45,37 +45,41 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="“Aksara swara iku cacahe ana …."
+                        android:text="Aksara swara iku cacahe ana …."
                         android:textSize="20sp"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
 
-                <GridLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:columnCount="3">
+                    android:columnCount="3"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/a"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="3"/>
 
                     <Button
                         android:id="@+id/b"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="4"/>
 
                     <Button
                         android:id="@+id/c"
                         android:onClick="onClick"
-                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="5"/>
 
-                </GridLayout>
+                </LinearLayout>
 
 
             </LinearLayout>
