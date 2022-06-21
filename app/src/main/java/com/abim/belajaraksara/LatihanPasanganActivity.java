@@ -80,9 +80,9 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
-            dialog.setTitle("Benar");
-            dialog.setMessage("Jawaban Kamu Benar");
-            editor.putInt("nilai", nilai + 10).commit();
+            dialog.setTitle("Salah");
+            dialog.setMessage("Jawaban Kamu Salah");
+            editor.putInt("nilai", nilai + 0).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
@@ -146,9 +146,9 @@ public class LatihanPasanganActivity extends AppCompatActivity implements View.O
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
-            editor.putInt("nilai", nilai + 0).commit();
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
+            editor.putInt("nilai", nilai + 10).commit();
             editor.putInt("count", count + 1).commit();
             if (getSharedPreferences(key, MODE_PRIVATE).getInt("count", 0) < 10){
                 dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {

@@ -147,8 +147,8 @@ public class PretestDasar2Activity extends AppCompatActivity implements View.OnC
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
             editor.putInt("nilai", nilai + 10).commit();
             editor.putInt("count", count + 1).commit();
             dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {

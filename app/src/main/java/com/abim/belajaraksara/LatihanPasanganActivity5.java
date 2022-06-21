@@ -66,9 +66,9 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
-            dialog.setTitle("Benar");
-            dialog.setMessage("Jawaban Kamu Benar");
-            editor.putInt("nilai", nilai + 10).commit();
+            dialog.setTitle("Salah");
+            dialog.setMessage("Jawaban Kamu Salah");
+            editor.putInt("nilai", nilai + 0).commit();
             editor.putInt("count", count + 1).commit();
             dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                 @Override
@@ -105,9 +105,9 @@ public class LatihanPasanganActivity5 extends AppCompatActivity implements View.
             dialog = new AlertDialog.Builder(ctx).create();
             dialog.setCancelable(false);
             dialog.setCanceledOnTouchOutside(false);
-            dialog.setTitle("Salah");
-            dialog.setMessage("Jawaban Kamu Salah");
-            editor.putInt("nilai", nilai + 0).commit();
+            dialog.setTitle("Benar");
+            dialog.setMessage("Jawaban Kamu Benar");
+            editor.putInt("nilai", nilai + 10).commit();
             editor.putInt("count", count + 1).commit();
             dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Lanjutkan", new DialogInterface.OnClickListener() {
                 @Override
